@@ -76,7 +76,6 @@ export class Login {
   }
 
   onOpenURL(event) {
-    console.log("pakage: ", event.url);
     if (event.url.startsWith(this.conf.appsiteUri)) {
       const { state, code } = querystring.parse(querystring.extract(event.url));
       if (this.state.state === state) {
